@@ -1,0 +1,11 @@
+version: "2"
+services:
+
+  extensions-config:
+    image: openlmis/one-network-extensions-config
+    volumes:
+      - 'extensions:/extensions'
+
+volumes:
+  extensions:
+    external: false

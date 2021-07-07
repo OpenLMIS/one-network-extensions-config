@@ -1,0 +1,20 @@
+
+repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+configurations {
+    extension {
+        transitive = false
+    }
+}
+
+dependencies {
+    extension "org.openlmis:one-network-referencedata-extension:0.0.1-SNAPSHOT"
+}
+
+task copyExtensions(type: Copy) {
+    from configurations.extension.files
+    into 'build/extensions/'
+}
