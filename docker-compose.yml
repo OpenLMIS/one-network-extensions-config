@@ -4,8 +4,8 @@ services:
   extensions-config:
     image: openlmis/one-network-extensions-config
     volumes:
-      - 'extensions:/extensions'
+      - 'referencedata-extension:/extensions'
 
 volumes:
-  extensions:
+  referencedata-extension:
     external: false
